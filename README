@@ -1,0 +1,26 @@
+AngelList
+
+A PHP interface to the AngelList API.
+
+For a full list of available methods and properties, please refer to the AngelList API documentation here:
+
+http://angel.co/api
+
+INSTALLATION
+------------
+
+Copy the contents of this repo to a directory called AngelList
+
+USAGE
+---------------
+
+The following example shows how to get information for three startups - Friendorse, Wooboard and Coachy:
+
+    require_once 'AngelList/Startup.php';
+    $Startup = new Startup();
+    $startups = $Startup->batch(array(
+        19178, // Friendorse
+        29937, // Wooboard
+        67577  // Coachy
+    ));
+    print_r($startups);
